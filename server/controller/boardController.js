@@ -1,4 +1,4 @@
-const expressAsyncHandler = require('express-async-handler')
+import expressAsyncHandler from 'express-async-handler'
 const Board = {
     'id': 1,
     'name': "Design"

@@ -1,5 +1,5 @@
-const Router = require('express')
-const getAllBoards = require('../controller/boardController')
+import { Router } from 'express'
+import { getAllBoards } from '../controller/boardController.js'
 
 const boardRoutes = Router()
 
