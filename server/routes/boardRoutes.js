@@ -3,6 +3,6 @@ import { getAllBoards } from '../controller/boardController.js'
 
 const boardRoutes = Router()
 
-boardRoutes.route('/').get(getAllBoards)
+boardRoutes.route('/boards').get(getAllBoards)
 
 export default boardRoutes
