@@ -6,6 +6,12 @@ export const getAllBoards = expressAsyncHandler(async (req, res) => {
     res.status(200).json(boards)
 })
 
+export const getOneBoard = expressAsyncHandler(async (req, res) => {
+    const { board_id } = req.params
+    const board = await Board.findById(board_id)
+    res.json(board)
+})
+
 export const addNewBoard = expressAsyncHandler(async (req, res) => {
     const { title, columns } = req.body
     const newBoard = new Board({

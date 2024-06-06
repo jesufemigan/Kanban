@@ -1,0 +1,25 @@
+{{#each this}}
+    <div class="column">
+        <span>
+            <div class="column__color"></div>
+            <p class="column__title">{{title}} ({{tasks.length}})</p>
+        </span>
+        <div class="{{#if (eq tasks.length 0)}}empty{{/if}} column__tasks">
+            {{!-- Render tasks here --}}
+            {{#each tasks}}
+                <div class="task">
+                    <h3 class="task-title">{{this.title}}</h3>
+                    <div class="subtasks" style="display: none;">
+                        {{#each this.subtasks}}
+                            <div class="subtask">
+                                <span>{{this.title}}</span>
+                                <span class="status">{{this.status}}</span>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+{{/each}}
+   

@@ -8,8 +8,10 @@ import cors from 'cors'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { connectDB } from './config/db.js'
+// import { boards } from './config/data.js'
+import Board from './model/boardModel.js'
 
-// connectDB()
+connectDB()
 const app = express()
 const hbs = create()
 
@@ -33,9 +35,12 @@ app.get('/', (req, res) => {
 })
 
 // app
-app.get('/free', (req, res) => {
-    res.render('')
+app.get('/home', async (req, res) => {
+    
+    const boards = await Board.find().lean()
+    res.render('home', { boards })
 })
+
 // Routes
 app.use('/api/v1/', boardRoutes)
 

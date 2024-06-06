@@ -1,0 +1,23 @@
+<h3>{{board.title}}</h3>
+
+{{#each board.columns}}
+  <div class="column">
+    <h4>{{title}}</h4>
+    <ul>
+      {{#each tasks}}
+        <li>
+          <span class="task-title">{{title}}</span>
+          <button class="toggle-subtasks">Show Subtasks</button>
+          <ul class="subtasks hidden">
+            {{#each subtasks}}
+              <li>
+                <input type="checkbox" id="subtask-{{id}}" {{isCompleted status}} disabled>
+                <label for="subtask-{{id}}">{{title}}</label>
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/each}}
