@@ -14,6 +14,7 @@ import Board from './model/boardModel.js'
 connectDB()
 const app = express()
 const hbs = create()
+const PORT = process.env.PORT || 5000
 
 // Views
 const __filename = fileURLToPath(import.meta.url)
@@ -44,4 +45,4 @@ app.get('/home', async (req, res) => {
 // Routes
 app.use('/api/v1/', boardRoutes)
 
-app.listen(5000, () => console.log('App is running'))
+app.listen(PORT, () => console.log('App is running'))
