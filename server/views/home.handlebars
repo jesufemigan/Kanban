@@ -8,6 +8,7 @@
     </head>
 <body>
     <div class="sideBar">
+        <button id="newBoardButton">Add New Board</button>
         <div class="allBoards">
             <p>All Boards ({{boards.length}})</p>
             <div class="eachBoard">
@@ -22,12 +23,35 @@
             </div>
         </div>
     </div>
-    <div class="column__container" id="columnContainer">
-        {{> column this.columns}}
-        <div class="column__new">
-            <span>
-                <h1>+ New Column</h1>
-            </span>
+    <div class="main-content">
+        <div class="header">
+            <button id="deleteBoardButton">Delete Board</button>
+        </div>
+        <div class="column__container" id="columnContainer">
+            {{> column this.columns}}
+            <div class="column__new">
+                <span>
+                    <h1>+ New Column</h1>
+                </span>
+            </div>
+        </div>
+    </div>
+     <!-- Modal for creating a new board -->
+    <div id="newBoardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Board</h2>
+            <form id="newBoardForm">
+                <label for="boardName">Name</label>
+                <input type="text" id="boardName" name="boardName" required>
+
+                <label for="columns">Columns</label>
+                <div id="columnsContainer">
+                    <input type="text" name="columns" class="columnName" required>
+                </div>
+                <button type="button" id="addColumnButton">+ Add New Column</button>
+                <button type="submit">Create New Board</button>
+            </form>
         </div>
     </div>
     <script src="scripts/home.js" defer></script>
