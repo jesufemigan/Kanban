@@ -4,7 +4,7 @@
 
 KanbanApp is a simple and intuitive application designed to help users organize their tasks effectively. The app allows users to create and manage boards and columns, providing a visual representation of their workflow. This README provides detailed information about the project, including installation instructions, usage guidelines, and more.
 
-- **Deployed Site:** [KanbanApp Live]([your-deployed-site-link](https://kanban-q2mb.onrender.com/))
+- **Deployed Site:** [KanbanApp Live](https://kanban-q2mb.onrender.com/)
 - **Final Project Blog Article:** [KanbanApp Development Journey](https://docs.google.com/document/d/1SdHHdWUfo1rjqOjorYagcblbKIcgW1IXhxf1NRNRXbU/edit?usp=sharing)
 - **Author LinkedIn:** [LinkedIn Profile](https://linkedin.com/in/jesufemi-oladapo)
 
